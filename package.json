@@ -1,0 +1,19 @@
+{
+  "name": "apptricity",
+  "version": "1.0.0",
+  "description": "Expense Management System using HTML5, CSS3, and AngularJS",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FNyambati/Apptricity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FNyambati/Apptricity/issues"
+  },
+  "homepage": "https://github.com/FNyambati/Apptricity#readme"
+}

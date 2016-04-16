@@ -1,0 +1,17 @@
+@import "variables";
+
+body {
+  background-color: rgba(#49cf49, 0.54)
+;
+  color: white;
+
+}
+h1 {
+  color: $grayColor;
+  text-align: center;
+  margin-top: 25%;
+  font-size: 5em;
+  font-family: $myFont;
+
+
+}
