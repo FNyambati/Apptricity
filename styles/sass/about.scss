@@ -1,0 +1,115 @@
+@import "variables";
+.aboutContainer {
+  height: 100%;
+  width: 100%;
+  .banner {
+    height: 70%;
+    width: 100%;
+    // background-image: url(./img/background.jpg);
+    background-size: auto;
+    h1 {
+      text-align: center;
+      font-size: 3.5em;
+      line-height: 400px;
+      color: white;
+    }
+  }
+  .share {
+    text-align: center;
+    font-size: 1.7em;
+    padding-bottom: 10px;
+    color: $greenColor;
+    margin-bottom: 5%;
+  }
+  .about {
+    height: 80%;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    .personal {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-align: center;
+        font-size: 2em;
+        color: $greenColor;
+      }
+      i {
+        font-size: 5.5em;
+        justify-content: center;
+        margin-top: 15px;
+        color: $greenColor;
+        margin-bottom: 2%;
+      }
+      p {
+        padding: 10px 10px 10px 30px;
+        font-size: 1.3em;
+        color: #454545;
+      }
+    }
+    .social {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-align: center;
+        font-size: 2em;
+        color: $greenColor;
+      }
+      i {
+        font-size: 5.5em;
+        justify-content: center;
+        margin-top: 15px;
+        color: $greenColor;
+        margin-bottom: 2%;
+      }
+      p {
+        padding: 10px;
+        font-size: 1.3em;
+        color: #454545;
+      }
+    }
+    .local {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-align: center;
+        font-size: 2em;
+        color: $greenColor;
+      }
+      i {
+        font-size: 5.5em;
+        justify-content: center;
+        margin-top: 15px;
+        color: $greenColor;
+        margin-bottom: 2%;
+      }
+      p {
+        padding: 10px;
+        font-size: 1.3em;
+        color: #454545;
+      }
+    }
+  }
+  .ready {
+    text-align: center;
+    h2 {
+      font-size: 1.7em;
+      a {
+        text-decoration: none;
+        color: rgb(102, 79, 140);
+      }
+      a:hover {
+        color: rgb(23, 21, 112);
+      }
+    }
+  }
+}

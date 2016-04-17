@@ -1,13 +1,13 @@
 @import "variables";
 
 body {
-  background-color: rgba(#49cf49, 0.54)
+  background-color: $grayColor;
 ;
   color: white;
 
 }
 h1 {
-  color: $grayColor;
+  color: $greenColor;
   text-align: center;
   margin-top: 25%;
   font-size: 5em;

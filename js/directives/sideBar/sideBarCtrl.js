@@ -1,4 +1,4 @@
-angular.module('myApp').controller('navBarCtrl', function($scope){
+angular.module('myApp').controller('sideBarCtrl', function($scope){
 
   //////MENU BAR FUNCTIONS///////////
   // Variables
