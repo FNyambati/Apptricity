@@ -92,6 +92,7 @@
         color: #171570; }
 
 .dashboardContainer {
+  color: black;
   /* Inner */
   /* Close Button */ }
   .dashboardContainer h1 {
@@ -108,7 +109,7 @@
     font-family: "Nova Flat", cursive;
     text-align: center; }
   .dashboardContainer .popup {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: none;
     position: fixed;
@@ -127,13 +128,18 @@
     box-shadow: 0px 2px 6px black;
     border-radius: 3px;
     background: #fff; }
+    .dashboardContainer .popup-inner input {
+      line-height: 2em; }
     .dashboardContainer .popup-inner h2 {
-      color: black; }
+      color: green; }
     .dashboardContainer .popup-inner p {
       color: black; }
     .dashboardContainer .popup-inner a {
       text-decoration: none;
-      color: red; }
+      color: red;
+      display: inline; }
+    .dashboardContainer .popup-inner .submit {
+      color: green; }
   .dashboardContainer .popup-close {
     width: 30px;
     height: 30px;
