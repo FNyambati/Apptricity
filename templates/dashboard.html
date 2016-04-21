@@ -1,0 +1,67 @@
+<div class="dashboardContainer">
+  <h1>Dashboard</h1>
+  <center>
+    <a class="btn" data-popup-open="popup-1" href="#">New Expense</a>
+  </center>
+
+  <center>
+    <h2>Past Expenses</h2>
+
+    <table style="width:90%">
+      <div class="headers">
+        <tr>
+          <th>Mercahnt</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Comment</th>
+          <th>Manage</th>
+        </tr>
+      </div>
+      <tr ng-repeat="expense in expenses">
+        <td>{{expense.merchant}}</td>
+        <td>{{expense.date | date: "MMMM dd yyyy"}}</td>
+        <td>{{expense.amount | currency}}</td>
+        <td>{{expense.comment}}</td>
+        <td>
+          <button ng-click="expense.isEdited = true">Edit</button>
+          <button ng-click="removeExpense($index)">Remove</button>
+          <button ng-click="reimbursedExpense($index, expense)" class='reimbursed'>Mark As Reimbursed</button>
+        </td>
+      </tr>
+    </table>
+  </center>
+
+
+
+
+
+
+
+
+
+
+  <!--    NEW EXPENSE FORM     -->
+  <div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+      <h2>New Expense Form</h2>
+      <form class="expenseForm">
+        Merchant Name:
+        <br>
+        <input type="text" ng-model="merchant" size="40%" height="20">
+        <br> Date Made:
+        <br>
+        <input type="Date" ng-model="date" size="25%">
+        <br> Expense Amount:
+        <br>
+        <input type="Number" ng-model="expense" size="25%">
+        <br>Comment (optional):
+        <br>
+        <input type="text" ng-model="comment" placeholder="optional" size="40%">
+      </form>
+      <span>
+      <p><a data-popup-close="popup-1" href="#" class="submit" ng-click="newExpense()">Submit Expense</a></p>
+      <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+    </span>
+    </div>
+  </div>
+</div>

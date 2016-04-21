@@ -22,7 +22,7 @@ body {
   left: -25%;
   width: 25%;
   height: 100%;
-  background: #49cf49;
+  background: #000;
   opacity: 0.7;
   padding-top: 25px;
   -webkit-transition: left 0.2s ease-in-out;
@@ -71,7 +71,7 @@ body {
 .site-menu__list {
   list-style: none;
   padding: 5px 25px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   opacity: 1;
 }
 .site-menu__link {
@@ -79,10 +79,10 @@ body {
   text-decoration: none;
   font-size: 1.5em;
   font-weight: 100;
-  color: black;
+  color: white;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 .site-menu__link:hover {
-  color: #000;
+  color: #085c18;
 }

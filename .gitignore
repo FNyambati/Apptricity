@@ -1,1 +1,5 @@
-node-modules
+node_modules
+ui-grid.eot
+ui-grid.ttf
+ui-grid.woff
+.DS_Store

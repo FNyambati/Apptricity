@@ -6,6 +6,8 @@ var concat = require('gulp-concat');
 ///WATCH CHANGES TO SCSS FILES//////
 
 /////SASS///////
+
+//////CONCATS TO MASTER.CSS
 gulp.task('styles', function(){
   return gulp.src('./styles/sass/**/*.scss')
   .pipe(sass().on('error', sass.logError))

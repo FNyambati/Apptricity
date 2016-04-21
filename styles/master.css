@@ -12,7 +12,8 @@
       color: white; }
   .aboutContainer .share {
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.9em;
+    padding-top: 30px;
     padding-bottom: 10px;
     color: rgba(73, 207, 73, 0.7);
     margin-bottom: 5%; }
@@ -20,7 +21,8 @@
     height: 80%;
     display: flex;
     width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 10%; }
     .aboutContainer .about .personal {
       height: 100%;
       flex: 1;
@@ -40,7 +42,7 @@
       .aboutContainer .about .personal p {
         padding: 10px 10px 10px 30px;
         font-size: 1.3em;
-        color: #454545; }
+        color: white; }
     .aboutContainer .about .social {
       height: 100%;
       flex: 1;
@@ -60,9 +62,9 @@
       .aboutContainer .about .social p {
         padding: 10px;
         font-size: 1.3em;
-        color: #454545; }
+        color: white; }
     .aboutContainer .about .local {
-      height: 100%;
+      height: 40%;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -80,7 +82,7 @@
       .aboutContainer .about .local p {
         padding: 10px;
         font-size: 1.3em;
-        color: #454545; }
+        color: white; }
   .aboutContainer .ready {
     text-align: center; }
     .aboutContainer .ready h2 {
@@ -92,15 +94,39 @@
         color: #171570; }
 
 .dashboardContainer {
-  color: black;
   /* Inner */
   /* Close Button */ }
+  .dashboardContainer table {
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px; }
+    .dashboardContainer table th {
+      font-size: 1.5em;
+      border: 1.5px solid black;
+      padding: 10px;
+      margin-bottom: 20px; }
+    .dashboardContainer table tr {
+      font-size: 1.5em;
+      border-top: 1px solid black; }
+  .dashboardContainer h2 {
+    margin-top: 10%;
+    font-family: "Nova Flat", cursive;
+    font-size: 2.9em;
+    margin-bottom: 5%; }
+  .dashboardContainer button {
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    padding: 2px;
+    margin-bottom: 2px; }
   .dashboardContainer h1 {
     margin-bottom: 6%;
     margin-top: 4%; }
   .dashboardContainer .btn {
+    background-color: black;
     border: 3px solid rgba(73, 207, 73, 0.7);
-    padding: 2%; }
+    padding: 2%;
+    border-radius: 20px; }
   .dashboardContainer a {
     color: rgba(73, 207, 73, 0.7);
     font-size: 1.8em;
@@ -127,7 +153,7 @@
     transform: translate(-50%, -50%);
     box-shadow: 0px 2px 6px black;
     border-radius: 3px;
-    background: #fff; }
+    background: #4A4A4A; }
     .dashboardContainer .popup-inner input {
       line-height: 2em; }
     .dashboardContainer .popup-inner h2 {
@@ -136,10 +162,8 @@
       color: black; }
     .dashboardContainer .popup-inner a {
       text-decoration: none;
-      color: red;
+      color: green;
       display: inline; }
-    .dashboardContainer .popup-inner .submit {
-      color: green; }
   .dashboardContainer .popup-close {
     width: 30px;
     height: 30px;
@@ -157,22 +181,52 @@
     font-size: 20px;
     text-align: center;
     line-height: 100%;
-    color: #fff; }
+    color: black; }
   .dashboardContainer .popup-close:hover {
     -webkit-transform: translate(50%, -50%) rotate(180deg);
     transform: translate(50%, -50%) rotate(180deg);
     background: black;
     text-decoration: none; }
 
+.pastExpenses {
+  text-align: center; }
+  .pastExpenses h2 {
+    color: black; }
+  .pastExpenses .myGrid {
+    width: 80%;
+    height: 250px;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+
+.loginContainer h4 {
+  font-size: 1.5em; }
+
+.loginContainer input {
+  line-height: 2.5em;
+  font-size: 1em;
+  margin-bottom: 2%;
+  height: 35px; }
+
+.loginContainer .loginBtn {
+  font-size: 1.5em;
+  height: 20%;
+  line-height: 2em;
+  width: 10%;
+  color: green;
+  background-color: black;
+  border-radius: 10px; }
 
 body {
-  background-color: rgba(206, 209, 215, 0.87);
+  background-color: rgba(0, 0, 0, 0.71);
   color: white; }
 
 h1 {
   color: rgba(73, 207, 73, 0.7);
   text-align: center;
-  margin-top: 25%;
+  margin-top: 15%;
   font-size: 5em;
   font-family: "Nova Flat", cursive; }
 
@@ -186,7 +240,8 @@ h1 {
     .navBarContainer nav ul li a {
       color: rgba(73, 207, 73, 0.7);
       text-decoration: none;
-      font-size: 2.2em;
+      font-size: 1.8em;
+      margin-left: 25px;
       font-family: "Nova Flat", cursive; }
 
 * {
@@ -213,7 +268,7 @@ body {
   left: -25%;
   width: 25%;
   height: 100%;
-  background: #49cf49;
+  background: #000;
   opacity: 0.7;
   padding-top: 25px;
   -webkit-transition: left 0.2s ease-in-out;
@@ -260,7 +315,7 @@ body {
 .site-menu__list {
   list-style: none;
   padding: 5px 25px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   opacity: 1; }
 
 .site-menu__link {
@@ -268,9 +323,9 @@ body {
   text-decoration: none;
   font-size: 1.5em;
   font-weight: 100;
-  color: black;
+  color: white;
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
 
 .site-menu__link:hover {
-  color: #000; }
+  color: #085c18; }

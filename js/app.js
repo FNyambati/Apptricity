@@ -1,38 +1,40 @@
-angular.module('myApp', ['ui.router'])
+angular.module('myApp', ['ui.router', 'ui.grid', 'ui.grid.edit'])////DEPENDINCES
 
-
+/////UI_ROUTER////
 .config(function($stateProvider, $urlRouterProvider){
 
   $urlRouterProvider.otherwise('/');
 
 
-  $stateProvider
+  $stateProvider/////STATES
 
     .state('home', {
       url: '/',
-      templateUrl: '/views/home.html',
+      templateUrl: '/templates/home.html',
       // controller: 'homeCtrl'
     })
     .state('about', {
       url: '/about',
-      templateUrl: '/views/about.html'
+      templateUrl: '/templates/about.html'
     })
     .state('dashboard', {
       url: '/dashboard',
-      templateUrl: '/views/dashboard.html',
+      templateUrl: '/templates/dashboard.html',
       controller: 'dashboardCtrl'
     })
     .state('expenses', {
       url: '/expenses',
-      templateUrl: '/views/expenses.html',
-      // controller: 'expensesCtrl'
+      templateUrl: '/templates/expenses.html',
+      controller: 'dashboardCtrl'
     })
     .state('login', {
       url: '/login',
-      templateUrl: '/views/login.html',
-      // controller: 'loginCtrl'
+      templateUrl: '/templates/login.html',
+      controller: 'loginCtrl'
     });
  })
+
+ ////DIRECTIVES////
  .directive('navBar', function() {
     return {
         templateUrl: './js/directives/navBar.html',
