@@ -1,5 +1,23 @@
 angular.module('myApp').controller('dashboardCtrl', function($scope, $stateParams, dashboardService) {
 
+  if(!localStorage.getItem('expenses')){  ////DEFAULT EXPENSE IF EMPTY
+    localStorage.setItem('expenses', JSON.stringify([{
+      "merchant": "Black Cat",
+      "date": "2016-04-20",
+      "amount": 12.99,
+      "comment": "asdf"
+    }]));
+  }
+
+  if(!localStorage.reimbursed){ ////DEFAULT REIMBURSED EXPENSE IF EMPTY
+    localStorage.setItem('reimbursed', JSON.stringify([{
+      "merchant": "Santa",
+      "date": "2016-12-25",
+      "amount": 12.99,
+      "comment": "Merry Christmas"
+    }]));
+  }
+
   $scope.expenses = JSON.parse(localStorage.expenses); ////GETS NEW EXPENSES FROM LOCAL STORAGE
 
 
@@ -35,9 +53,9 @@ angular.module('myApp').controller('dashboardCtrl', function($scope, $stateParam
 
 
 
-$scope.reimbursedExpense = function($index, expense){
-    dashboardService.addReimbursed();
-  
+$scope.reimbursedExpense = function(index, expense){
+    dashboardService.addReimbursed(index, expense);
+
 };
 
 
@@ -82,6 +100,10 @@ $scope.reimbursedExpense = function($index, expense){
       e.preventDefault();
     });
   });
+
+  $(window).unload(function(){ //////FUNCTION TO WIPE LOCAL STORAGE ON CLOSE
+  localStorage.clear();
+});
 
 
 });

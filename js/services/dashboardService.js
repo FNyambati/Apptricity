@@ -1,11 +1,13 @@
 angular.module("myApp").service("dashboardService", function() {
 
-  var expenses = [];   //////SETS ARRAY OF NEW EXPENSES IN LOCAL STORAGE
-  var reimbursed = [];  /////SETS ARRAY OF REIMBURSED EXPENSES IN LOCAL STORAGE
+  var expenses = []; //////SETS ARRAY OF NEW EXPENSES IN LOCAL STORAGE
+
+
+  var reimbursed = []; /////SETS ARRAY OF REIMBURSED EXPENSES IN LOCAL STORAGE
 
 
 
-  this.getExpenses = function() {   //////GETS NEW EXPENSES
+  this.getExpenses = function() { //////GETS NEW EXPENSES
     if (!localStorage.getItem('expenses')) {
       console.log('hittin');
       return JSON.parse(localStorage.expenses);
@@ -15,7 +17,7 @@ angular.module("myApp").service("dashboardService", function() {
   };
 
 
-  this.addReimbursed = function(index, expense) {     //////ADDS NEW EXPENSES TO REIMBURSED ARRAY
+  this.addReimbursed = function(index, expense) { //////ADDS NEW EXPENSES TO REIMBURSED ARRAY
     var reims = JSON.parse(localStorage.getItem('reimbursed'));
     reims.push(expense);
     localStorage.setItem('reimbursed', JSON.stringify(reims));
@@ -27,7 +29,7 @@ angular.module("myApp").service("dashboardService", function() {
 
 
 
-  this.addNewExpense = function(obj) {   ///////ADDS EXPENSES
+  this.addNewExpense = function(obj) { ///////ADDS EXPENSES
     var itemToGo = localStorage.getItem('expenses');
     itemToGo = JSON.parse(itemToGo);
     itemToGo.push(obj);
@@ -39,7 +41,7 @@ angular.module("myApp").service("dashboardService", function() {
 
 
 
-  this.editExpense = function(expense, index) {     ///EDITS EXPENSES
+  this.editExpense = function(expense, index) { ///EDITS EXPENSES
     var itemToGo = localStorage.getItem('expenses');
     itemToGo = JSON.parse(itemToGo);
     itemToGo[index] = expense;
@@ -49,7 +51,7 @@ angular.module("myApp").service("dashboardService", function() {
 
 
 
-  this.removeExpense = function(index) {   //////REMOVES EXPENSES
+  this.removeExpense = function(index) { //////REMOVES EXPENSES
     var itemToGo = localStorage.getItem('expenses');
     itemToGo = JSON.parse(itemToGo);
     itemToGo.splice(index, 1);
